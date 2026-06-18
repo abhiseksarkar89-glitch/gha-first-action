@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main   # triggers on push to main
-  workflow_dispatch   # allows manual trigger
+
 
 jobs:
   print-message:
