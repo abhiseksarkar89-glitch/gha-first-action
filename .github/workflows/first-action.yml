@@ -1,12 +1,15 @@
-name: First Workflow
+name: Push + Manual Workflow
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main   # triggers on push to main
+  workflow_dispatch   # allows manual trigger
 
 jobs:
-  first_job:
+  print-message:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print greeting
-        run: echo "Hello World"
-      - name: Print GoodBy
-        run : echo "Done - bye!"
+      - name: Print message
+        run: echo "Workflow run 🚀"
